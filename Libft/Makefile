@@ -6,7 +6,7 @@
 #    By: wfreulon <wfreulon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 20:16:59 by wfreulon          #+#    #+#              #
-#    Updated: 2022/11/23 19:04:43 by wfreulon         ###   ########.fr        #
+#    Updated: 2022/11/24 23:37:37 by wfreulon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ bonus: $(OBJ_B) $(OBJFILES)
 	ar -rc $(NAME) $^
 
 clean:
+	rm -f $(OBJ_B)
 	rm -f $(OBJFILES)
 
 fclean:

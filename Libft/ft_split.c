@@ -6,13 +6,13 @@
 /*   By: wfreulon <wfreulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 18:14:24 by wfreulon          #+#    #+#             */
-/*   Updated: 2022/11/24 23:02:56 by wfreulon         ###   ########.fr       */
+/*   Updated: 2022/11/24 23:36:06 by wfreulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_free(char **str, int index)
+static void	*ft_free(char **str, int index)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ static int	ft_free(char **str, int index)
 		i++;
 	}
 	free(str);
-	return (1);
+	return (NULL);
 }
 
 static int	strcount(char *s, char c)
@@ -108,13 +108,13 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[tab_i[0]] = checkchar((char *)s, c);
 			if (!tab[tab_i[0]++])
-				if (ft_free(tab, tab_i[1]) == 1)
-					return (NULL);
+					return (ft_free(tab, tab_i[1]));
 			while (*s && *s != c)
 				s++;
 		}
 		else
 			s++;
 	}
-	return (tab[tab_i[0]] = NULL, tab);
+	tab[tab_i[0]] = NULL;
+	return (tab);
 }
