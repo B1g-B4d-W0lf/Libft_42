@@ -6,7 +6,7 @@
 /*   By: wfreulon <wfreulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:13:56 by wfreulon          #+#    #+#             */
-/*   Updated: 2022/11/24 23:28:54 by wfreulon         ###   ########.fr       */
+/*   Updated: 2022/11/28 21:29:04 by wfreulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
 	void	*str;
 
-	// if (elementSize != 0 && elementCount > SIZE_MAX / elementSize)
 	if (elementSize >= SIZE_MAX || elementCount >= SIZE_MAX)
 		return (NULL);
 	str = malloc(elementCount * elementSize);

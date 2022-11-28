@@ -6,7 +6,7 @@
 /*   By: wfreulon <wfreulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 18:14:24 by wfreulon          #+#    #+#             */
-/*   Updated: 2022/11/24 23:36:06 by wfreulon         ###   ########.fr       */
+/*   Updated: 2022/11/28 21:29:15 by wfreulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[tab_i[0]] = checkchar((char *)s, c);
 			if (!tab[tab_i[0]++])
-					return (ft_free(tab, tab_i[1]));
+				return (ft_free(tab, tab_i[1]));
 			while (*s && *s != c)
 				s++;
 		}
