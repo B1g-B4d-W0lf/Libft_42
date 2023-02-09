@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-t_list	*ft_lstnewnew(char *content, t_list *lst, int boolean)
+x_list	*ft_lstnewnew(char *content, x_list *lst, int boolean)
 {
-	t_list	*res;
+	x_list	*res;
 	int		i;
 
 	i = -1;
@@ -27,7 +27,7 @@ t_list	*ft_lstnewnew(char *content, t_list *lst, int boolean)
 		res = lst;
 		return (res);
 	}
-	res = malloc(sizeof(t_list));
+	res = malloc(sizeof(x_list));
 	if (!res)
 		return (NULL);
 	res->content = malloc(((ft_strlenfree(content, 0, 1) + 1) * sizeof(char)));
@@ -40,9 +40,9 @@ t_list	*ft_lstnewnew(char *content, t_list *lst, int boolean)
 	return (res);
 }
 
-char	*ft_lstaddback(t_list **lst, t_list *new, char *west, int boolean)
+char	*ft_lstaddback(x_list **lst, x_list *new, char *west, int boolean)
 {
-	t_list	*temp;
+	x_list	*temp;
 
 	if (!boolean)
 	{
@@ -65,10 +65,10 @@ char	*ft_lstaddback(t_list **lst, t_list *new, char *west, int boolean)
 	return (west);
 }
 
-int	ft_strlenfree(char *str, t_list *tab, int boolean)
+int	ft_strlenfree(char *str, x_list *tab, int boolean)
 {
 	int		i;
-	t_list	*temp;
+	x_list	*temp;
 
 	i = 0;
 	if (!boolean)
@@ -87,7 +87,7 @@ int	ft_strlenfree(char *str, t_list *tab, int boolean)
 	return (i);
 }
 
-int	ft_lstiternew(t_list *lst, int (*f)(char *, t_list *tab, int boolean))
+int	ft_lstiternew(x_list *lst, int (*f)(char *, x_list *tab, int boolean))
 {
 	int		index;
 

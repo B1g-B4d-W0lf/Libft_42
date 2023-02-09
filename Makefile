@@ -23,6 +23,7 @@ HEADERFILES = libft.h
 OBJFILES = $(SRC:.c=.o)
 OBJ_B = $(BONUS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
+CC = gcc
 
 $(NAME): $(OBJFILES)
 	ar -rc $@ $^

@@ -25,21 +25,21 @@
 #  define BUFFER_SIZE 42
 # endif
 
-typedef struct s_list
+typedef struct g_list
 {
 	char			*content;
-	struct s_list	*next;
-}					t_list;
+	struct g_list	*next;
+}					x_list;
 
-t_list	*ft_lstnewnew(char *content, t_list *lst, int boolean);
-char	*ft_lstaddback(t_list **lst, t_list *new, char *west, int boolean);
-int		ft_strlenfree(char *str, t_list *tab, int boolean);
-int		ft_lstiternew(t_list *lst, int (*f)(char *, t_list *tab, int boolean));
-char	*fillstr(t_list *tab, int index);
+x_list	*ft_lstnewnew(char *content, x_list *lst, int boolean);
+char	*ft_lstaddback(x_list **lst, x_list *new, char *west, int boolean);
+int		ft_strlenfree(char *str, x_list *tab, int boolean);
+int		ft_lstiternew(x_list *lst, int (*f)(char *, x_list *tab, int boolean));
+char	*fillstr(x_list *tab, int index);
 char	*get_next_line(int fd);
 int		checkbuffer(char c, char const *set);
-char	*readit(int fd, char *west, t_list **tab);
+char	*readit(int fd, char *west, x_list **tab);
 int		writetemp(char *temp, char *str, int boolean);
-char	*westigation(char *west, char *buffer, t_list **tab, int boolean);
+char	*westigation(char *west, char *buffer, x_list **tab, int boolean);
 
 #endif
